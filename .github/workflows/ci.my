@@ -1,0 +1,17 @@
+name: Mi primer CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Decir hola
+        run: echo "¡Pipeline funcionando!"
