@@ -25,7 +25,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copiamos SOLO el output del build desde la etapa anterior
 # Ajusta la ruta si tu angular.json tiene otro outputPath
-COPY --from=builder /app/dist/mi-app-angular/browser /usr/share/nginx/html
+COPY --from=builder /app/dist/hola-mundo-angular/browser /usr/share/nginx/html
 
 EXPOSE 80
 
