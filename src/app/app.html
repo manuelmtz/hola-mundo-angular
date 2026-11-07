@@ -184,9 +184,23 @@
   }
 </style>
 
-<main class="main">
-  <app-user-card-component></app-user-card-component>
+<main>
   
+  <!-- <app-user-card-component></app-user-card-component> -->
+  <p> Contador Actual {{count()}}</p>
+  <br>
+  <br><button class="button"  (click)="increment()">Incrementar</button>
+  <br>
+  <button  class="button"  (click)="reset()">Reiniciar</button>
+  <br>
+  <p>Doble del contador: {{ doubleCount() }}</p>
+  <h2>Lista de Usuarios desde una API</h2>
+  <h2>Lista de Usuarios desde una API</h2>
+<ul>
+  @for (user of users(); track user.id) {
+    <li>{{ user.name }} ({{ user.email }})</li>
+  }
+</ul>
   <!-- <div class="content">
     <div class="left-side">
       <svg
