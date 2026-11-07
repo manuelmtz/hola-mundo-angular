@@ -1,0 +1,14 @@
+<p>user-card-component works!</p>
+@if (isLoggedIn) {
+ <h1> Bienvenido</h1>   
+} @else {
+    <h1> Inicia sesión</h1>   
+}
+
+<ul>
+    @for (item of items; track $index) {
+        <li>
+          {{$index}}.-  {{item}}
+        </li>
+    }
+</ul>
